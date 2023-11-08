@@ -1,1 +1,79 @@
-
+try:
+    ch=int(input("\t1) Binary Arithmetic\n\t2) Number conversions"))
+except ValueError:
+    print("Enter a valid choice please...")
+except Exception as e:
+    print("Oops! something went wrong...")
+    print(e)
+else:
+    if ch==1:
+        pass
+    elif ch==2:
+        pass
+    else:
+        print("Enter a valid choice please...")
+try:
+    choice=int(input("\t1) from Binary\n\t2) from Octal\n\t3) from Decimal\n\t4) from Hex.D\n\t"))
+except ValueError:
+    print("Please enter a valid choice...")
+except Exception as e:
+    print("Oops! something went wrong...")
+    print(e)
+else:
+    if choice==1:
+        try:
+            number = input("Please enter a Binary number: ")
+            decimal=int(number,2)
+        except ValueError:
+            print("Please enter a valid binary number...")
+        except Exception:
+            print("Oops! something went wrong...")
+        else:
+            print("Octal: {:o}".format(decimal))
+            print("Decimal: {}".format(decimal))
+            print("Hex.D: {:X}".format(decimal))
+        finally:
+            pass  # this will always execute even there is an exception or not
+    elif choice==2:
+        try:
+            number = input("Please enter a Octal number: ")
+            decimal=int(number,8)
+        except ValueError:
+            print("Please enter a valid binary number...")
+        except Exception:
+            print("Oops! something went wrong...")
+        else:
+            print("Binary: {:b}".format(decimal))
+            print("Decimal: {}".format(decimal))
+            print("Hex.D: {:X}".format(decimal))
+        finally:
+            pass  # this will always execute even there is an exception or not
+    elif choice==3:
+        try:
+            number = int(input("Please enter a decimal number: "))
+        except ValueError:
+            print("Please enter a valid number...")
+        except Exception:
+            print("Oops! something went wrong...")
+        else:
+            print("Binary: {:b}".format(number))
+            print("Octal: {:o}".format(number))
+            print("Hex.D: {:X}".format(number))
+        finally:
+            pass  # this will always execute even there is an exception or not
+    elif choice==4:
+        try:
+            number = input("Please enter a Hex.D number: ")
+            decimal=int(number,16)
+        except ValueError:
+            print("Please enter a valid binary number...")
+        except Exception:
+            print("Oops! something went wrong...")
+        else:
+            print("Binary: {:b}".format(decimal))
+            print("Octal: {:o}".format(decimal))
+            print("Decimal: {}".format(decimal))
+        finally:
+            pass  # this will always execute even there is an exception or not
+    else:
+        print("Please enter a valid choice, your choice is not valid...")
